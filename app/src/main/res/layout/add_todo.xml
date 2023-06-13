@@ -9,23 +9,45 @@
     <TextView android:layout_width="match_parent"
               android:layout_margin="10dp"
               android:textSize="20sp"
-              android:text="Please Enter A NAME:"
+              android:text="Create a new Title:"
+
               android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="@+id/editText"
               app:layout_constraintEnd_toEndOf="@+id/editText"
               app:layout_constraintBottom_toTopOf="@+id/editText" app:layout_constraintTop_toTopOf="parent"
-              app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.549"/>
+              app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.559"/>
     <EditText
             android:layout_width="match_parent"
             android:text="Enter description"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:background="@drawable/shapes"
             android:layout_height="100dp"
+            android:id="@+id/editDesc"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.337"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:text="Edit Title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shapes"
+            android:layout_height="48dp"
             android:id="@+id/editText"
-            app:layout_constraintVertical_bias="0.375"
+            app:layout_constraintVertical_bias="0.163"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_margin="5dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:text="Create"
+            android:layout_width="103dp"
+            android:layout_height="63dp" android:id="@+id/createTodo"
+            app:layout_constraintTop_toBottomOf="@+id/editText" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.896" app:layout_constraintVertical_bias="0.386"/>
 
 
     <!-- Add your views or other layout elements here -->
