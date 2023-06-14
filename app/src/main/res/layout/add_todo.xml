@@ -3,21 +3,23 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         >
 
 
     <TextView android:layout_width="match_parent"
               android:layout_margin="10dp"
               android:textSize="20sp"
-              android:text="Create a new Title:"
-
-              android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="@+id/editText"
-              app:layout_constraintEnd_toEndOf="@+id/editText"
-              app:layout_constraintBottom_toTopOf="@+id/editText" app:layout_constraintTop_toTopOf="parent"
-              app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.559"/>
+              android:textAlignment="center"
+              android:textColor="@color/black"
+              android:text="Create a new TODO!"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintBottom_toTopOf="@+id/editDesc" app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintVertical_bias="0.481" app:layout_constraintEnd_toEndOf="parent"/>
     <EditText
             android:layout_width="match_parent"
-            android:text="Enter description"
+            android:hint="Enter description"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:background="@drawable/shapes"
@@ -28,26 +30,46 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintVertical_bias="0.337"/>
-    <EditText
-            android:layout_width="match_parent"
-            android:text="Edit Title"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:background="@drawable/shapes"
-            android:layout_height="48dp"
-            android:id="@+id/editText"
-            app:layout_constraintVertical_bias="0.163"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="5dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
     <Button
             android:text="Create"
             android:layout_width="103dp"
             android:layout_height="63dp" android:id="@+id/createTodo"
-            app:layout_constraintTop_toBottomOf="@+id/editText" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.896" app:layout_constraintVertical_bias="0.386"/>
+            app:layout_constraintHorizontal_bias="0.886"
+            android:onClick="returnBack"
+
+            app:layout_constraintTop_toBottomOf="@+id/editDesc"
+            app:layout_constraintVertical_bias="0.056"/>
+    <Button
+            android:text="Delete ToDo 1?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/editDesc" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/createTodo" android:layout_marginTop="80dp"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintVertical_bias="0.1"
+
+
+    />
+    <Button
+            android:text="Delete ToDo 2?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button2"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintHorizontal_bias="0.031"
+            app:layout_constraintBottom_toTopOf="@+id/button3" app:layout_constraintVertical_bias="0.52"/>
+    <Button
+            android:text="Delete ToDo 3?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/button3"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.031"
+            android:layout_marginBottom="92dp"/>
 
 
     <!-- Add your views or other layout elements here -->

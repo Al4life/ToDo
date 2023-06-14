@@ -3,6 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -13,10 +14,13 @@
             android:padding="16dp">
 
         <!-- RecyclerView to display the list of to-do items -->
+
+        <!-- FloatingActionButton to add new to-do items -->
+
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewTodoList"
                 android:layout_width="0dp"
-                android:layout_height="750dp"
+                android:layout_height="500dp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
                 android:clipToPadding="false"
@@ -24,9 +28,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/fabAddTodo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintVertical_bias="0.375"/>
-
-        <!-- FloatingActionButton to add new to-do items -->
+                app:layout_constraintVertical_bias="0.0" app:layout_constraintHorizontal_bias="0.0"/>
         <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabAddTodo"
                 android:layout_width="wrap_content"
@@ -37,99 +39,89 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView3"
                 app:layout_constraintHorizontal_bias="1.0"
-                android:layout_marginBottom="4dp" android:contentDescription="TODO: Fix in a add Todo Button"
-                android:onClick="openNewActivity"
+                android:layout_marginBottom="15776dp" android:contentDescription="TODO: Fix in a add Todo Button"
+                android:onClick="openNewActivity"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        />
 
         <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:id="@+id/CheckBox"
+                android:layout_width="131dp"
+                android:layout_height="match_parent"
+                android:text="Task"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/recyclerViewTodoList"
                 app:layout_constraintEnd_toEndOf="@+id/recyclerViewTodoList"
                 app:layout_constraintTop_toTopOf="@+id/recyclerViewTodoList"
                 app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTodoList"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintVertical_bias="0.062"/>
+                app:layout_constraintVertical_bias="0.0"/>
         <CheckBox
                 android:id="@+id/checkBox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:layout_width="131dp"
+                android:layout_height="match_parent"
+                android:text="Task"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/recyclerViewTodoList"
                 app:layout_constraintEnd_toEndOf="@+id/recyclerViewTodoList"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTodoList"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintVertical_bias="0.0"/>
+
         <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
+                android:background="@drawable/shapes"
                 android:layout_height="122dp"
-                android:text="TextView"
-                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                android:hint="TextView"
+                android:gravity="center"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/CheckBox"
                 app:layout_constraintEnd_toEndOf="@+id/recyclerViewTodoList"
                 app:layout_constraintTop_toTopOf="@+id/recyclerViewTodoList"
                 app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTodoList"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintVertical_bias="0.146"/>
-
+                app:layout_constraintVertical_bias="0.126"/>
         <TextView
                 android:id="@+id/textView2"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
+                android:background="@drawable/shapes"
                 android:layout_height="122dp"
-                android:text="TextView"
+                android:hint="TextView"
+                android:gravity="center"
                 app:layout_constraintTop_toBottomOf="@+id/checkBox2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTodoList"
-                app:layout_constraintVertical_bias="0.021"/>
+                app:layout_constraintVertical_bias="0.0" app:layout_constraintHorizontal_bias="0.781"/>
+
         <CheckBox
                 android:id="@+id/checkBox3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:layout_width="131dp"
+                android:layout_height="match_parent"
+                android:text="Task"
+                android:textColor="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintEnd_toEndOf="@+id/textView3"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintVertical_bias="1.0"/>
-
+                app:layout_constraintVertical_bias="0.0"/>
         <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
+                android:background="@drawable/shapes"
                 android:layout_height="122dp"
-                android:text="TextView"
+                android:hint="TextView"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
                 app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTodoList"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintVertical_bias="0.229"/>
-        <CheckBox
-                android:id="@+id/checkBox4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CheckBox"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/textView4"
-                app:layout_constraintEnd_toEndOf="@+id/textView4"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintVertical_bias="1.0"/>
-        <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="122dp"
-                android:text="TextView"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTodoList"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintVertical_bias="0.777"/>
+                app:layout_constraintVertical_bias="1.0" app:layout_constraintHorizontal_bias="0.781"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
